@@ -48,6 +48,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v2.5.0
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_BRANCH: main
+          PUBLISH_BRANCH: server
           PUBLISH_DIR: /
 
