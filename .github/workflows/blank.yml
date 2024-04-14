@@ -46,7 +46,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: java -Xms2048M -Xmx2048M -jar server.jar
-        working-directory: ./server1
+        working-directory: server1
 
       # Runs a set of commands using the runners shel
   save:
