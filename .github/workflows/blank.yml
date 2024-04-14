@@ -39,14 +39,20 @@ jobs:
           repository: hcratch3/minecraft-server
           ref: gh-pages
           path: ./
-
+  server:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: java -Xms2048M -Xmx2048M -jar server.jar
         working-directory: ./server1
 
       # Runs a set of commands using the runners shel
-
+  save:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: publish
         uses: peaceiris/actions-gh-pages@v3
         with:
